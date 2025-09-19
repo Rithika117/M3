@@ -14,19 +14,27 @@ To write a program to prepare EMI calculator using function without return type 
 6.	Stop the program.
 
 ## PROGRAM
-
+```
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float p = 775000, R = 8.75, y = 10.6 * 12, emi, r, c;
+    r = R/(12*100);
+    c = pow((1+r),y);
+    emi = (p*c*r)/(c-1);
+    printf("Monthly EMI is= %.3f",emi);
+    return 0;
+}
+```
 
 ## OUTPUT
 
-
-
-
+![image](https://github.com/user-attachments/assets/b4fb4349-4e6e-4104-85f7-5b3d8726939f)
 
 ## RESULT
 
 Thus the program to prepare EMI calculator using function without return type with arguments has been executed successfully
- 
- 
 
 
 # EX-12-FIBONACCI-SERIES
@@ -43,15 +51,28 @@ To write a C program to generate the Fibonacci series for the value 6.
 7.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+int main() {
+    int n = 6; 
+    int a = 0, b = 1, next, i;
 
+    printf("Fibonacci series for %d terms:\n", n);
+
+    for (i = 1; i <= n; i++) {
+        printf("%d ", a);
+        next = a + b;
+        a = b;
+        b = next;
+    }
+
+    printf("\n");
+    return 0;
+}
+```
 ## OUTPUT
 
-
-
-
-
-
-
+<img width="654" height="165" alt="image" src="https://github.com/user-attachments/assets/0f4fd944-229b-40dc-8c85-ab77aeb12c87" />
 
 ## RESULT
 Thus the program to generate the Fibonacci series for the value 6 has been executed successfully.
@@ -71,22 +92,32 @@ To write a C program to read n elements as input and print the last element of t
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n]; 
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("The last element is: %d\n", arr[n - 1]);
+
+    return 0;
+}
+```
 
 ## OUTPUT
-
-
-
-
-
-
+<img width="845" height="254" alt="image" src="https://github.com/user-attachments/assets/b51dde26-c403-4bea-a7af-49303a909405" />
 
 
 
 ## RESULT
 Thus the program to read n elements as input and print the last element of the array has been executed successfully.
- 
- 
-
 
 # EX-14-POSITIVE-ARRAY-ELEMENTS
 ## AIM
@@ -101,22 +132,15 @@ To write a C Program to count total number of positive elements in an array.
 6.	Stop the program.
 
 ## PROGRAM
-
+<img width="1164" height="532" alt="image" src="https://github.com/user-attachments/assets/e48e8423-3d93-4705-8bee-98d8f10a4c72" />
 
 ## OUTPUT
 
-
-
-
+<img width="1151" height="243" alt="image" src="https://github.com/user-attachments/assets/d4d37c1c-4224-48fa-ad4f-02f775ef71a5" />
 
 ## RESULT
 Thus the program to count total number of positive elements in an array has been executed successfully.
 
-
-
-
-
- 
  
 
 
@@ -137,11 +161,9 @@ To write a C program to replace all even elements with 'E' in one dimensional ar
  Print the updated array after replacements.
 
 ## Program:
-
+<img width="880" height="568" alt="image" src="https://github.com/user-attachments/assets/e379d836-9ed4-4725-88b0-706c3123e04c" />
 ## Output:
- 
-
-
+ <img width="1105" height="239" alt="image" src="https://github.com/user-attachments/assets/75e5721e-b621-45fd-b6a8-f22dd0f17e32" />
 ## Result:
 
 Thus, the program to replace all even elements with 'E' in one dimensional array was verified successfully.
